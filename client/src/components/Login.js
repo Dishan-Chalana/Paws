@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Axios from "axios";
 import Cookies from "universal-cookie";
 
-function Login(setIsAuth) {
+function Login({ setIsAuth }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const cookies = new Cookies();

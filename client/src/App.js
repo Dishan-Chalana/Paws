@@ -4,6 +4,9 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import { StreamChat } from "stream-chat";
 import Cookies from "universal-cookie";
+import JoinGame from "./components/JoinGame";
+import { Chat } from "stream-chat-react";
+
 
 function App() {
   const apiKey = "8sdjnb5cqnas";
@@ -44,7 +47,10 @@ function App() {
   return (
     <div className="App">
       {isAuth ? (
-        <button onClick={logOut}> LogOut </button>
+        <Chat client={client}>
+          <JoinGame />
+          <button onClick={logOut}> LogOut </button>
+        </Chat>
       ) : (
         <>
           <SignUp setIsAuth={setIsAuth} />
