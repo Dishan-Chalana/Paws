@@ -6,17 +6,20 @@
     align-items: center;
     column-count: 2;
     column-gap: 100px;
+    color: #ffffff;
+    
 }
 
 .str-chat__list {
-    background-color: white;
+    background-color:#043933;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     padding: 5px;
-    height: 300px;
+    height: 340px;
     width: 300px;
     overflow: hidden;
     overflow-y: scroll;
+    
 }
 
 .str-chat__list ul {
@@ -28,9 +31,9 @@
 
 .str-chat__list li {
     list-style-type: none;
-    background-color: lightgrey;
+    background-color:  #128c7e;
     margin-top: 10px;
-    border-radius: 6px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
 }
@@ -44,27 +47,33 @@
 }
 
 .str-chat__message-text-inner {
-    font-size: 20px;
+    font-size:20px;
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 5px;
 }
 
 .str-chat__message-data {
     margin-bottom: 20px;
+    color: #ffffff86;
+    
 }
 
 .str-chat__message-data span {
     margin-left: 5px;
+    font-weight: 700;
+    font-size:15px;
+    color: #ffffff;
 }
 
 .str-chat__message-data time {
     margin-left: 5px;
+    font-size:10px;
 }
 
 .str-chat__input-flat {
     width: 310px;
-    height: 200px;
-    background-color: lightgrey;
+    height: 150px;
+    background-color: #043933;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 }
@@ -74,24 +83,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
     height: 100%;
 }
 
 .str-chat__input-flat-wrapper textarea {
     resize: none;
-    width: 200px;
+    width: 250px;
     height: 90px;
     border: none;
-    border-radius: 6px;
-    box-shadow: 0 0 0 1px black;
+    border-radius: 19px;
+    color: #ffffff;
+    
+    background-color:#3a596eaf;
     padding: 10px;
     font-size: 15px;
+    overflow:hidden;
 }
+
+
 
 .str-chat__message-simple__actions {
     width: 100%;
     padding-left: 5px;
     margin-top: 5px;
+    
 }
 
 .str-chat__message-simple__actions__action--reactions {
@@ -113,8 +129,11 @@
 
 .str-chat__reaction-list--counter {
     display: none;
+    
 }
-
+.str-chat__message-reaction-count {
+    color:#ffffff;
+}
 .str-chat__reaction-list--reverse button {
     margin-left: 10px;
     border: none;
@@ -142,4 +161,22 @@
 .emoji-mart-emoji-custom span {
     height: 15px !important;
     width: 15px !important;
+}
+
+.send-msg-btn {
+    color: #ffffff;
+    background-color: #1fb556;
+    border: none;
+    margin-top: 5px;
+    height: 35px;
+    width: 120px;
+    
+}
+.send-msg-btn:hover {
+    color: #ffffff;
+    background-color: #0d6a3d;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    
 }

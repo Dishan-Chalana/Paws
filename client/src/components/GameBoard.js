@@ -4,6 +4,7 @@ import { useChannelStateContext, useChatContext } from "stream-chat-react"
 import { Patterns } from "./WinningPatterns"
 
 
+
 function GameBoard({ result, setResult }) {
     //player icons
     const paw = "🐾";
@@ -18,8 +19,9 @@ function GameBoard({ result, setResult }) {
 
     //check for a winner whenever game board changes
     useEffect(() => {
-        checkWin();
         checkIfTie();
+        checkWin();
+        
     }, [gameBoard])
 
     const chooseSquare = async (square) => {
@@ -57,7 +59,7 @@ function GameBoard({ result, setResult }) {
 
             //if there is a winner
             if (foundWinningPattern) {
-                alert("Winner", gameBoard[currentPattern[0]]);
+                // alert("Winner", gameBoard[currentPattern[0]]);
                 setResult({ winner: gameBoard[currentPattern[0]], state: "won" });
             }
 
@@ -75,7 +77,7 @@ function GameBoard({ result, setResult }) {
         });
 
         if(boardFilled) {
-            alert("Game Tied");
+            // alert("Game Tied");
             setResult({winner: "none", state: "tie"});
         }
     }
@@ -105,7 +107,7 @@ function GameBoard({ result, setResult }) {
 
 
     return (
-        //3x3 board
+        //3x3 Game Board
         <div className='gameBoard'>
             <div className='row'>
                 <Square chooseSquare={() => {

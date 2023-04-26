@@ -49,7 +49,7 @@ function App() {
       {isAuth ? (
         <Chat client={client}>
           <JoinGame />
-          <button onClick={logOut}> LogOut </button>
+          <button className="logout-btn" onClick={logOut}> Logout </button>
         </Chat>
       ) : (
         <>

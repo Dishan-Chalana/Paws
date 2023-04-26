@@ -1,5 +1,6 @@
 import React from 'react'
 import {ChatAutoComplete , useMessageInputContext} from "stream-chat-react"
+import "./Chat.css";
 
 function CoustomInput() {
     const { handleSubmit } = useMessageInputContext();
@@ -9,7 +10,7 @@ function CoustomInput() {
                 <div className="str-chat__input-flat--textarea-wrapper">
                     <ChatAutoComplete />
                 </div>
-                <button onClick={handleSubmit}> Send Message</button>
+                <button className="send-msg-btn" onClick={handleSubmit}> Send Message</button>
             </div>
         </div>
     );

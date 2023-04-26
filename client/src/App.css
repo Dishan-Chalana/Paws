@@ -1,14 +1,6 @@
 .App {
   text-align: center;
-}
-
-.gameBoard {
-  width: 500px;
-  height: 500px;
-  background-color: rgb(252, 252, 252);
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
+  
 }
 
 .row {
@@ -17,10 +9,20 @@
   flex-direction: row;
 }
 
+.gameBoard {
+  background-color: rgb(54, 54, 54);
+  width: 500px;
+  height: 500px;
+  border: 2px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+}
+
 .square {
   flex: 33%;
   height: 100%;
-  border: 1px solid black;
+  border: 2px solid rgb(0, 0, 0);
+  
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -30,5 +32,45 @@
 }
 
 .square:active {
-  background-color: lightgray;
+  background-color: rgb(255, 255, 255);
+}
+.square:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+
+.leave-btn   {
+  color: #ffffff;
+  background-color: #b51f1f;
+  border: none;
+  margin-top: 5px;
+  height: 35px;
+  width: 120px;
+  
+}
+.leave-btn:hover {
+  color: #ffffff;
+  background-color: #6a270d;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.logout-btn {
+  color: #ffffff;
+  background-color: #b51f1f;
+  border: none;
+  margin-top: 5px;
+  height: 35px;
+  width: 120px;
+}
+
+.logout-btn:hover {
+  color: #ffffff;
+  background-color: #ff0a0a;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  
 }
