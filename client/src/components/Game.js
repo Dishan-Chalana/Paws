@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import GameBoard from './GameBoard';
+import {Window, MessageList, MessageInput} from "stream-chat-react"
+import "./Chat.css";
 
 
 function Game({ channel }) {
@@ -18,8 +20,22 @@ function Game({ channel }) {
         <div className='gameContainer'>
             <GameBoard result={result} setResult={setResult}/>
             {/* Player Chat */}
+            <Window>
+                {/* chat list features */}
+                <MessageList 
+                disableDateSeparator 
+                closeReactionSelectorOnClick 
+                messageActions={["react"]}
+                hideDeletedMessages
+
+                />
+                <MessageInput noFiles/>
+            </Window>
 
             {/* Leave game button */}
+            <button onClick={async() =>
+             await channel.stop
+            }>Leave game</button>
 
             
         </div>

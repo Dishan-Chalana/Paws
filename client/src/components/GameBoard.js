@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Square from './Square'
 import { useChannelStateContext, useChatContext } from "stream-chat-react"
-import { Patterns } from "../WinningPatterns"
+import { Patterns } from "./WinningPatterns"
 
 
 function GameBoard({ result, setResult }) {
