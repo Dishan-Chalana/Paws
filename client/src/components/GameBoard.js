@@ -4,11 +4,11 @@ import { useChannelStateContext, useChatContext } from "stream-chat-react"
 import { Patterns } from "./WinningPatterns"
 
 
-
 function GameBoard({ result, setResult }) {
     //player icons
     const paw = "🐾";
     const rat = "🐀";
+    
 
     const [gameBoard, setGameBoard] = useState(["", "", "", "", "", "", "", "", ""])
     const [player, setPlayer] = useState(paw);

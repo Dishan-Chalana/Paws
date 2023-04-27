@@ -1,0 +1,43 @@
+.logIn {
+    width: 300px;
+    margin-top: 20vh;
+    margin-left: 200px;
+    text-align: center;
+    align-items: center;
+}
+
+
+.logIn .txt-box {
+    height: 35px;
+    width: 300px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    
+}
+
+.logIn label {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+ 
+}
+
+
+
+.login-btn {
+    margin-top: 10px;
+    height: 35px;
+    width: 90px;
+    background-color: rgb(31, 205, 4);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: rgb(1, 171, 61);
+    cursor: pointer;
+}

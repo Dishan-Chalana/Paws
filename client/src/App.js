@@ -52,10 +52,10 @@ function App() {
           <button className="logout-btn" onClick={logOut}> Logout </button>
         </Chat>
       ) : (
-        <>
-          <SignUp setIsAuth={setIsAuth} />
+        <div className="reg-form">
+          <SignUp  setIsAuth={setIsAuth} />
           <Login setIsAuth={setIsAuth} />
-        </>
+        </div>
       )}
     </div>
   );

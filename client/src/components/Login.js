@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import Cookies from "universal-cookie";
+import './Login.css';
 
 function Login({ setIsAuth }) {
   const [username, setUsername] = useState("");
@@ -28,14 +29,14 @@ function Login({ setIsAuth }) {
     <div className="logIn">
       <label>Login</label>
 
-      <input
+      <input className="txt-box"
         placeholder="User Name"
         onChange={(event) => {
           setUsername(event.target.value);
         }}
       />
 
-      <input
+      <input className="txt-box"
         type="password"
         placeholder="Password"
         onChange={(event) => {
@@ -43,7 +44,7 @@ function Login({ setIsAuth }) {
         }}
       />
 
-      <button onClick={logIn}>Login</button>
+      <button className="login-btn" onClick={logIn}>Login</button>
     </div>
   );
 }
