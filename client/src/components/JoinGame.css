@@ -1,6 +1,8 @@
 .joinGame {
     margin-bottom: 10px;
     margin-top: 20%;
+    background-color: rgba(0, 0, 0, 0.500);
+    height: 150px;
 }
 
 .joinGame h3 {

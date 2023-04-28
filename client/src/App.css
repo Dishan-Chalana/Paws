@@ -41,9 +41,10 @@
 
 .leave-btn   {
   color: #ffffff;
-  background-color: #b51f1f;
+  background-color: #cf971e;
   border: none;
-  margin-top: 0px;
+  margin-bottom: 10px;
+  
   height: 35px;
   width: 120px;
   
@@ -51,16 +52,18 @@
 }
 .leave-btn:hover {
   color: #ffffff;
-  background-color: #6a270d;
+  background-color: #d3b719;
   border: none;
   cursor: pointer;
   transition: 0.3s;
   
 }
 
+
+
 .logout-btn {
   color: #ffffff;
-  background-color: #b51f1f;
+  background-color: #d20000;
   border: none;
   margin-top: 5px;
   height: 35px;

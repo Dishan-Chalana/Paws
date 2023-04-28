@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react'
 import Square from './Square'
 import { useChannelStateContext, useChatContext } from "stream-chat-react"
 import { Patterns } from "./WinningPatterns"
+import "./GameBoard.css";
 
 
 function GameBoard({ result, setResult }) {
     //player icons
     const paw = "🐾";
-    const rat = "🐀";
-    
+    const rat = "🐭";
+
 
     const [gameBoard, setGameBoard] = useState(["", "", "", "", "", "", "", "", ""])
     const [player, setPlayer] = useState(paw);
@@ -21,7 +22,7 @@ function GameBoard({ result, setResult }) {
     useEffect(() => {
         checkIfTie();
         checkWin();
-        
+
     }, [gameBoard])
 
     const chooseSquare = async (square) => {
@@ -44,6 +45,7 @@ function GameBoard({ result, setResult }) {
         }
     };
 
+    
     //check for winner
     const checkWin = () => {
         Patterns.forEach((currentPattern) => {
@@ -59,30 +61,32 @@ function GameBoard({ result, setResult }) {
 
             //if there is a winner
             if (foundWinningPattern) {
-                // alert("Winner", gameBoard[currentPattern[0]]);
+                alert("you are winner");    
                 setResult({ winner: gameBoard[currentPattern[0]], state: "won" });
+                var winner = result.winner;
+                togglePopup();
             }
 
         });
-        
+
     };
 
     //check for  tie
-    const checkIfTie= () => {
+    const checkIfTie = () => {
         let boardFilled = true;
-        gameBoard.forEach ((square) => {
+        gameBoard.forEach((square) => {
             if (square == "") {
                 boardFilled = false;
             }
         });
 
-        if(boardFilled) {
+        if (boardFilled) {
             // alert("Game Tied");
-            setResult({winner: "none", state: "tie"});
+            setResult({ winner: "none", state: "tie" });
         }
     }
 
-    
+
 
 
     channel.on((event) => {
@@ -109,6 +113,7 @@ function GameBoard({ result, setResult }) {
     return (
         //3x3 Game Board
         <div className='gameBoard'>
+
             <div className='row'>
                 <Square chooseSquare={() => {
                     chooseSquare(0)

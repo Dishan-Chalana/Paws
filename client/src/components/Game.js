@@ -18,6 +18,7 @@ function Game({ channel, setChannel }) {
     }
     return (
       <div>
+        <h1 className='main-title' >🐾 PAWS 🐭</h1>
         <div className='gameContainer'>
             <GameBoard result={result} setResult={setResult} />
             {/* Player Chat */}
@@ -46,8 +47,8 @@ function Game({ channel, setChannel }) {
         </button>
 
             {/* display player results */}
-            {result.state === "won" && <div> {result.winner} <h1>Won The Game</h1> </div>}
-            {result.state === "tie" && <div> {result.winner} <h1>Game Tieds</h1> </div>}
+            {/* {result.state === "won" && <div> {result.winner} <h1>Won The Game</h1> </div>}
+            {result.state === "tie" && <div> {result.winner} <h1>Game Tieds</h1> </div>} */}
       </div>
         
     )
