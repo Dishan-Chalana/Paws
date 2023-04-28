@@ -1,16 +1,20 @@
 .logIn {
-    width: 300px;
+    width: 400px;
+    width: 400px;
     margin-top: 20vh;
     margin-left: 200px;
     text-align: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.500);
+    padding-top: 100px;
+    
 }
 
 
 .logIn .txt-box {
     height: 35px;
     width: 300px;
-    display: block;
+    
     text-align: center;
     margin-top: 10px;
     border-radius: 10px;
@@ -28,7 +32,7 @@
 
 
 .login-btn {
-    margin-top: 10px;
+    margin-top: 20px;
     height: 35px;
     width: 90px;
     background-color: rgb(31, 205, 4);

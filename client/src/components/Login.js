@@ -29,6 +29,7 @@ function Login({ setIsAuth }) {
     <div className="logIn">
       <label>Login</label>
 
+      <br/>
       <input className="txt-box"
         placeholder="User Name"
         onChange={(event) => {
@@ -36,6 +37,7 @@ function Login({ setIsAuth }) {
         }}
       />
 
+      <br/>
       <input className="txt-box"
         type="password"
         placeholder="Password"
@@ -43,7 +45,7 @@ function Login({ setIsAuth }) {
           setPassword(event.target.value);
         }}
       />
-
+      <br/>
       <button className="login-btn" onClick={logIn}>Login</button>
     </div>
   );

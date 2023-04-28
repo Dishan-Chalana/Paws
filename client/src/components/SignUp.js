@@ -56,7 +56,7 @@ function SignUp({ setIsAuth }){
           setUser({ ...user, password: event.target.value });
         }}
       />
-
+      <br/>
       <button className="signup-btn" onClick={signUp}>Sign Up</button>
     </div>
   );

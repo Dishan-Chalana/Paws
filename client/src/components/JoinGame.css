@@ -1,0 +1,39 @@
+.joinGame {
+    margin-bottom: 10px;
+    margin-top: 20%;
+}
+
+.joinGame h3 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.txt-join-game {
+    height: 35px;
+    width: 300px;
+    text-align: center;
+    
+    border-radius: 10px;
+    border: none;
+    
+}
+
+
+
+.start-btn {
+    margin-top: 20px;
+    height: 35px;
+    width: 150px;
+    background-color: #1a9246;
+    border: none;
+    margin-left: 30px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background-color: #1ed07a;
+    cursor: pointer;
+}

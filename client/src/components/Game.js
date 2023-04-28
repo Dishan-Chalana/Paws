@@ -14,7 +14,7 @@ function Game({ channel, setChannel }) {
     })
 
     if (!playesJoined) {    //if all players are not connected
-        return <div> Waiting for other player....</div>;
+        return <div className='waiting-msg'> Waiting for other player....</div>;
     }
     return (
       <div>
@@ -43,7 +43,7 @@ function Game({ channel, setChannel }) {
             >
                 {" "}
                 Leave Game
-            </button>
+        </button>
 
             {/* display player results */}
             {result.state === "won" && <div> {result.winner} <h1>Won The Game</h1> </div>}

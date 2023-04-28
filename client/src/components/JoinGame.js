@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useChatContext, Channel } from "stream-chat-react";
 import Game from "./Game";
 import CustomInput from "./CoustomInput";
+import "./JoinGame.css";
 
 
 function JoinGame() {
@@ -38,14 +39,14 @@ function JoinGame() {
       ) : (
         <div className="joinGame">
           <h3>Create Game</h3>
-          <input
+          <input className="txt-join-game"
             placeholder="Username of your partner"
             onChange={(event) => {
               setRivalUsername(event.target.value);
             }}
           />
 
-          <button onClick={createChannel}> Join / Start Game</button>
+          <button className="start-btn" onClick={createChannel}> Join / Start Game</button>
         </div>
       )}
     </>

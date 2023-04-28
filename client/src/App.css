@@ -43,9 +43,10 @@
   color: #ffffff;
   background-color: #b51f1f;
   border: none;
-  margin-top: 5px;
+  margin-top: 0px;
   height: 35px;
   width: 120px;
+  
   
 }
 .leave-btn:hover {
