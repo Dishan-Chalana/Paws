@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Axios from "axios";
 import Cookies from "universal-cookie";
 import './Login.css';
+import Swal from 'sweetalert2';
 
 function Login({ setIsAuth }) {
   const [username, setUsername] = useState("");
@@ -14,6 +15,26 @@ function Login({ setIsAuth }) {
       password,
     }).then((res) => {
       const { token, userId, firstName, lastName, username } = res.data;
+      
+
+      if (!token || !userId || !firstName || !lastName || !username) {
+
+        return Swal.fire({ //show error when user not fill all fields
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Username or password is incorrect..!',
+        })
+
+      } else {
+        Swal.fire({ //show success message when user created
+          position: 'center',
+          icon: 'success',
+          title: 'Login successful',
+          showConfirmButton: false,
+          timer: 2500
+        })
+      }
+
 
       //set all cookies
       cookies.set("token", token);
@@ -29,7 +50,7 @@ function Login({ setIsAuth }) {
     <div className="logIn">
       <label>Login</label>
 
-      <br/>
+      <br />
       <input className="txt-box"
         placeholder="User Name"
         onChange={(event) => {
@@ -37,7 +58,7 @@ function Login({ setIsAuth }) {
         }}
       />
 
-      <br/>
+      <br />
       <input className="txt-box"
         type="password"
         placeholder="Password"
@@ -45,7 +66,7 @@ function Login({ setIsAuth }) {
           setPassword(event.target.value);
         }}
       />
-      <br/>
+      <br />
       <button className="login-btn" onClick={logIn}>Login</button>
     </div>
   );

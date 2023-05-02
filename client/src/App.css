@@ -68,6 +68,7 @@
   margin-top: 5px;
   height: 35px;
   width: 120px;
+  transition: 0.3s;
 }
 
 .logout-btn:hover {

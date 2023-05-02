@@ -3,6 +3,7 @@
     margin-top: 20%;
     background-color: rgba(0, 0, 0, 0.500);
     height: 150px;
+    margin-top: 10em;
 }
 
 .joinGame h3 {
@@ -27,7 +28,7 @@
     margin-top: 20px;
     height: 35px;
     width: 150px;
-    background-color: #1a9246;
+    background-color:  rgb(33, 179, 11);;
     border: none;
     margin-left: 30px;
     color: white;
@@ -36,6 +37,6 @@
 }
 
 .start-btn:hover {
-    background-color: #1ed07a;
+    background-color:  rgb(4, 210, 76);
     cursor: pointer;
 }

@@ -31,14 +31,14 @@
     margin-top: 20px;
     height: 35px;
     width: 90px;
-    background-color: rgb(74, 175, 247);
+    background-color: rgb(37, 135, 255);
     border: none;
-    
+    transition: 0.3s;
     color: white;
     font-weight: bold;
 }
 
 .signup-btn:hover {
-    background-color: rgb(37, 135, 255);
+    background-color: rgb(74, 175, 247);
     cursor: pointer;
 }

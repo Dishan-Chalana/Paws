@@ -3,6 +3,7 @@ import Square from './Square'
 import { useChannelStateContext, useChatContext } from "stream-chat-react"
 import { Patterns } from "./WinningPatterns"
 import "./GameBoard.css";
+import Swal from 'sweetalert2';
 
 
 function GameBoard({ result, setResult }) {
@@ -61,10 +62,14 @@ function GameBoard({ result, setResult }) {
 
             //if there is a winner
             if (foundWinningPattern) {
-                alert("you are winner");    
+    
                 setResult({ winner: gameBoard[currentPattern[0]], state: "won" });
-                var winner = result.winner;
-                togglePopup();
+                Swal.fire({
+                    title: result.winner,
+                    text: "Won the game",
+                    backdrop: `rgba(21, 121, 0, 0.7)`
+                });
+                
             }
 
         });
@@ -81,8 +86,14 @@ function GameBoard({ result, setResult }) {
         });
 
         if (boardFilled) {
-            // alert("Game Tied");
             setResult({ winner: "none", state: "tie" });
+            Swal.fire({
+                icon: 'info',
+                title: 'Game tied..!',
+                backdrop: `rgba(11, 38, 117, 0.79)`
+                
+              });
+            
         }
     }
 

@@ -35,13 +35,14 @@
     margin-top: 20px;
     height: 35px;
     width: 90px;
-    background-color: rgb(31, 205, 4);
+    background-color: rgb(33, 179, 11);
     border: none;
     color: white;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .login-btn:hover {
-    background-color: rgb(1, 171, 61);
+    background-color: rgb(4, 210, 76);
     cursor: pointer;
 }
